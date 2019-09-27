@@ -1,21 +1,30 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground  } from 'react-native';
+import Forecast from './Forcast'
 
 export default class Weather extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            forecast: {
+            main: '-', description: '-', temp: 0
+            }
+        }
+    }
+       
     render() {
         return (
             <View style={styles.container}>
-                <Text>{this.props.zipCode}</Text>
+                <ImageBackground source={require('../assets/bg3.png')} style={styles.backdrop}>
+                    <Text>Zip code is {this.props.zipCode}.</Text>
+                    <Forecast {...this.state.forecast} />
+                </ImageBackground>
             </View>
         );
     }      
 }
 
 const styles = StyleSheet.create({
-  container: {
-  flex: 1,
-  backgroundColor: '#fff',
-  alignItems: 'center',
-  justifyContent: 'center',
-  },
+    container: { paddingTop: 25 },
+    backdrop: { width: '100%', height: '100%'},
 });
