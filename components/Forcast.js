@@ -5,12 +5,21 @@ export default class Forecast extends React.Component {
     render() {
         return (
             <View>
-                <Text>{this.props.main}</Text>
-                <Text>{this.props.description}</Text>
-                <Text>{this.props.temp}</Text>
-                <Text>°C</Text>
+                <Text style = {styles.Text}>{this.props.main}</Text>
+                <Text style = {styles.Text}>{this.props.description}</Text>
+                <Text style = {styles.Text}>{this.props.temp}</Text>
+                <Text style = {styles.Text}>°C</Text>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    Text:{
+        fontSize: 30,
+        color:	"#622569",
+    }
+    
+}
+);
    
