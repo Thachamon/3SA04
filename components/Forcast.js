@@ -17,7 +17,7 @@ export default class Forecast extends React.Component {
 const styles = StyleSheet.create({
     Text:{
         fontSize: 30,
-        color:	"#622569",
+        color:	"#8d9db6",
     }
     
 }
