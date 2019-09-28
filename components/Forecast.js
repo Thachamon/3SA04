@@ -7,8 +7,7 @@ export default class Forecast extends React.Component {
             <View>
                 <Text style = {styles.Text}>{this.props.main}</Text>
                 <Text style = {styles.Text}>{this.props.description}</Text>
-                <Text style = {styles.Text}>{this.props.temp}</Text>
-                <Text style = {styles.Text}>°C</Text>
+                <Text style = {styles.Text}>{this.props.temp} °C</Text>
             </View>
         );
     }
@@ -17,7 +16,7 @@ export default class Forecast extends React.Component {
 const styles = StyleSheet.create({
     Text:{
         fontSize: 30,
-        color:	"#8d9db6",
+        color:	"#ffffff",
     }
     
 }
